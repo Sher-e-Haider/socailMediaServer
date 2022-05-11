@@ -4,7 +4,9 @@
   "type": "module",
   "description": "",
   "main": "index.js",
-  
+  "engines": {
+    "node": "16.15"
+  },
   "scripts": {
     "start": "node index.js",
     "build": "ng build",
