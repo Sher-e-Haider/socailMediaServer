@@ -21,7 +21,7 @@ app.get('/',(req,res)=>{
 app.use('/api',Router)
 
 const PORT = process.env.PORT||5000
-mongoose.connect(process.env.MONGODB_URI,{              
+mongoose.connect(process.env.MONGODB_URI ||'mongodb+srv://socailMedia:social123@cluster0.r3dek.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{              
     useNewUrlParser:true,
     useUnifiedTopology:true
 }).then(()=>{
