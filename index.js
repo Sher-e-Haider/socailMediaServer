@@ -26,7 +26,7 @@ mongoose.connect(process.env.MONGODB_URI ||'mongodb+srv://socailMedia:social123@
     useUnifiedTopology:true
 }).then(()=>{
     app.listen(PORT,()=>{
-        console.log(`connected at http://localhost:${PORT}`);
+        console.log(`connected`);
     })
 }).catch((error)=>{
    console.log(error.meaasge);
