@@ -10,8 +10,7 @@
 },
   "scripts": {
         "ng": "ng",
-        "start": "node index.js",
-        "build": "ng build --prod"
+        "start": "node index.js"
         
   },
   "keywords": [],
