@@ -11,7 +11,7 @@
   "scripts": {
         "ng": "ng",
         "start": "node index.js",
-        "build": "ng build --prod",
+        "build": "ng build --prod"
         
   },
   "keywords": [],
