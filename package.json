@@ -4,10 +4,20 @@
   "type": "module",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "10.16.0"
+   
+},
   "scripts": {
-    "start": "node index.js",
-    "build": "ng build --prod",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ng": "ng",
+        "start": "node index.js",
+        "build": "ng build --prod",
+        "test": "ng test",
+        "lint": "ng lint",
+        "e2e": "ng e2e",
+        "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && ng serve -o",
+        "preinstall": "npm install -g @angular/cli",
+        "postinstall": "ng build --aot --prod"
   },
   "keywords": [],
   "author": "",
