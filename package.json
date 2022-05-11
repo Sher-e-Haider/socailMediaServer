@@ -8,8 +8,8 @@
     "node": "16.15"
   },
   "scripts": {
-    "start": "node index.js"
-     
+    "start": "node index.js",
+    "build": "ng build"
   },
   "keywords": [],
   "author": "",
