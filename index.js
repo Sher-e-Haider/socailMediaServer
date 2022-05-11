@@ -11,9 +11,9 @@ import AuthUser from './routes/authRoute.js'
 dotenv.config()
 const app = express()
 app.use(cors())
-app.use(express.json({limit: '50mb'}))
-app.use(bodyParser.json({limit:'50mb',extended:true}))
-app.use(bodyParser.urlencoded({limit:'50mb',extended:true}))
+app.use(express.json({limit: '30mb'}))
+app.use(bodyParser.json({limit:'30mb',extended:true}))
+app.use(bodyParser.urlencoded({limit:'30mb',extended:true}))
 app.use('/auth',AuthUser)
 app.get('/',(req,res)=>{
     res.send('App is running for me')
@@ -21,7 +21,7 @@ app.get('/',(req,res)=>{
 app.use('/api',Router)
 
 const PORT = process.env.PORT||5000
-mongoose.connect(process.env.MONGODB_URI ||'mongodb+srv://socailMedia:social123@cluster0.r3dek.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{              
+mongoose.connect(process.env.MONGODB_URI,{              
     useNewUrlParser:true,
     useUnifiedTopology:true
 }).then(()=>{
