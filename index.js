@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from 'dotenv'
 import cors from 'cors'
 import mongoose from "mongoose";
-import bodyParser from 'body-parser'
+//import bodyParser from 'body-parser'
 import Router from './routes/route.js'
 import AuthUser from './routes/authRoute.js'
 
@@ -13,8 +13,8 @@ const app = express()
 app.use(cors())
 
 app.use(express.json({limit: '30mb'}))
-app.use(bodyParser.json({limit:'30mb',extended:true}))
-app.use(bodyParser.urlencoded({limit:'30mb',extended:true}))
+// app.use(bodyParser.json({limit:'30mb',extended:true}))
+// app.use(bodyParser.urlencoded({limit:'30mb',extended:true}))
 app.use('/auth',AuthUser)
 app.get('/',(req,res)=>{
     res.send('App is running for me')
